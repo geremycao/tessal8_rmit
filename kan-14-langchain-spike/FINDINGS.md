@@ -78,16 +78,6 @@ including genuinely well-matched ones. The cutoff needs to be calibrated
 against realistic partial-coverage numbers like this, not against 100%
 coverage.
 
-## Gap 4 — Structured output reliability with DeepSeek V3
-
-Both `with_structured_output()` calls (Phase 1 extraction, Phase 4 judgment)
-returned clean, valid JSON on the first try, no retries or fallback needed.
-Feasibility confirmed for this shape of call. Caveat: this was one JD and one
-candidate, run once — it says nothing about reliability at the volume the
-real pipeline needs (500 candidates per batch per the SDD's 10-second
-dispatch requirement). Structured-output failure rate under concurrent load
-is still an open question, not something this spike can answer.
-
 ## Gap 2b — Gap 2 isn't hypothetical: it showed up in the actual extraction
 
 Running Phase 1 for real makes Gap 2 concrete rather than theoretical.
