@@ -138,6 +138,9 @@ employer entity needs introducing, or the relationship between "generic job
 role" and "one employer's posting of it" needs defining before `job_profiles`/
 `batch_runs` can actually be built with the RLS the SDD promises.
 
+<img width="1372" height="384" alt="image" src="https://github.com/user-attachments/assets/ba0721f1-abb2-4da7-b414-77aa6adc1ccb" />
+<img width="975" height="864" alt="image (1)" src="https://github.com/user-attachments/assets/a7e2c791-2241-45b6-8b91-ccddcdf44f29" />
+
 ## Next steps
 
 - Raise Gap 0 directly and separately with whoever owns the ERD/tags
