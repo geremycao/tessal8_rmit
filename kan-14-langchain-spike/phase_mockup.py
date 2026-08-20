@@ -2,13 +2,7 @@
 MatchIQ - KAN-14 R&D spike
 Basic LangChain + DeepSeek feasibility mock-up
 
-Goal (per Jeremy): NOT to prove LangChain beats a raw DeepSeek call.
-Goal IS to run a real mock-up and see where the current system design
-has gaps. JD and resume data below are real rows read directly out of
-002_seed_data.sql / matchiq_synthetic_resumes.sql (Tanmay's numbered
-migration files on GitHub - same content as the earlier hand-off files,
-just renamed), not queried from Supabase, so this isn't blocked on
-Marcello/Tanmay's DB load or on Gap 5's RLS policy question below.
+
 
 Covers:
   Phase 1 - Pre-flight: extract structured task requirements from a JD (LLM)
@@ -61,10 +55,6 @@ class CandidateJudgment(BaseModel):
     reasoning: str
 
 
-# ---------------------------------------------------------------------------
-# Sample data - written by hand, not pulled from the real dataset.
-# Swap these out once Marcello/Tanmay's data is loaded.
-# ---------------------------------------------------------------------------
 
 # Pulled from the real dataset: job_role 'Know Your Customer / Customer Due
 # Diligence Analyst' (job_id 0a511d86-...), its 3 work_functions, and all 15
@@ -102,7 +92,6 @@ Key responsibilities:
 # generated AGAINST this exact job — should score well.
 # candidate_2: Benjamin Cooke (resume_id 2e872f49-...), generated against
 # 'SysOps Engineer' instead — should score poorly, a genuine mismatch.
-# Both sets of bullets are real rows from matchiq_synthetic_resumes.sql.
 CANDIDATES = {
     "candidate_1_brian_hardin_kyc": [
         "Conducted periodic Know Your Customer (KYC) and Customer Due Diligence (CDD) "
